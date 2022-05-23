@@ -10,24 +10,28 @@
     <script>
 
         function pulaLinha() {
-        
+    
             document.write("<br>");
             document.write("<br>");
-        }
-        
+    }
+    
         function mostra(frase) {
-        
+    
             document.write(frase);
             pulaLinha();
-        }
-        
-        var vitorias = prompt("Entre com o número de vitórias.");
+    }
+    
+    var numeroPensado = Math.round(Math.random() * 10);
 
-    var empates = prompt("Entre com o número de empates.");
+    var chute = parseInt(prompt("digite seu chute!"));
 
-    var pontos = vitorias  * 3 + empates;
+    if(chute == numeroPensado) {
+    mostra("Você acertou!");
 
-    mostra("Os pontos do seu time são " + pontos);
-        </script>
+} else {
+    mostra("Você errou, o número pensado foi " + numeroPensado);
+}
+    
+    </script>
 </body>
 </html>

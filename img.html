@@ -11,28 +11,24 @@
 <script>
 
 function pulaLinha() {
+        
+        document.write("<br>");
+        document.write("<br>");
+    }
+    
+    function mostra(frase) {
+    
+        document.write(frase);
+        pulaLinha();
+    }
+    
+    var vitorias = prompt("Entre com o número de vitórias.");
 
-document.write("<br>");
-document.write("<br>");
-}
+var empates = prompt("Entre com o número de empates.");
 
-function mostra(frase) {
+var pontos = vitorias  * 3 + empates;
 
-document.write(frase);
-pulaLinha();
-}
-
-function calculaImc(altura, peso) {
-
-return peso / (altura * altura);
-}
-
-var nome = prompt("Informe o seu nome");
-var alturaInformada = prompt(nome + "Informe sua altura")
-var pesoInformado = prompt(nome + "Informe seu peso")
-
-var imc = calculaImc(alturaInformada, pesoInformado)
-document.write(nome + ", o seu IMC calculado é " + imc);
+mostra("Os pontos do seu time são " + pontos);
 
 </script>
 </body>
